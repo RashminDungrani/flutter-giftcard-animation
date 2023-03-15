@@ -1,6 +1,7 @@
-# giftcard_animation
+# Flutter Gift Card Animation
 
-A new Flutter project.
+- FIGMA design [link](https://www.figma.com/file/HexkpLmClD6vySaU5lLhy9/Gift-Card?node-id=0%3A1)
+
 
 ## Getting Started
 
