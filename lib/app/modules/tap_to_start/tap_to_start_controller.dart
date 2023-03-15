@@ -1,9 +1,6 @@
 part of controllers;
 
 class TapToStartController extends GetxController {
-  //TODO: Implement TapToStartController
-
-  final count = 0.obs;
   @override
   void onInit() {
     super.onInit();
@@ -18,6 +15,4 @@ class TapToStartController extends GetxController {
   void onClose() {
     super.onClose();
   }
-
-  void increment() => count.value++;
 }

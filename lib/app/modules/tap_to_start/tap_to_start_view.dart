@@ -5,16 +5,34 @@ class TapToStartView extends GetView<TapToStartController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('TapToStartView'),
-        centerTitle: true,
-      ),
-      body: Center(
-        child: Text(
-          'TapToStartView is working',
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
+      body: GestureDetector(
+          onTap: () {
+            Navigator.of(context).push(CustomPageRoute(const GiftcardView()));
+          },
+          child: Container(
+            height: context.height,
+            width: double.infinity,
+            decoration: const BoxDecoration(
+                gradient: LinearGradient(
+                    colors: [pinkColor, orangeColor],
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter)),
+            child: const Center(
+              child: Text("TAP",
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.white,
+                    fontWeight: FontWeight.w600,
+                    shadows: [
+                      Shadow(
+                        color: Colors.black,
+                        offset: Offset(0, 2),
+                        blurRadius: 4,
+                      ),
+                    ],
+                  )),
+            ),
+          )),
     );
   }
 }
