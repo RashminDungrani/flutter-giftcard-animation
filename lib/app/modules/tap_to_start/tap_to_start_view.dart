@@ -7,7 +7,8 @@ class TapToStartView extends GetView<TapToStartController> {
     return Scaffold(
       body: GestureDetector(
           onTap: () {
-            Navigator.of(context).push(CustomPageRoute(const GiftcardView()));
+            Navigator.of(context)
+                .pushReplacement(CustomPageRoute(const GiftcardView()));
           },
           child: Container(
             height: context.height,

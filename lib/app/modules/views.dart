@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 
 import '../common/styles/page_transition.dart';
 import '../common/styles/styles.dart';
+import '../data/app_images.dart';
 import 'controllers.dart';
 
 part 'tap_to_start/tap_to_start_view.dart';
