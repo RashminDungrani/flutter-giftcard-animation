@@ -9,6 +9,9 @@ class TapToStartController extends GetxController {
   @override
   void onReady() {
     super.onReady();
+
+// TODO
+    // precacheImage(provider, context);
   }
 
   @override

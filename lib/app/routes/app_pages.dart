@@ -15,7 +15,7 @@ class AppPages {
   static final routes = [
     GetPage(
       name: _Paths.TAP_TO_START,
-      page: () => const TapToStartView(),
+      page: () => TapToStartView(),
       binding: TapToStartBinding(),
     ),
   ];

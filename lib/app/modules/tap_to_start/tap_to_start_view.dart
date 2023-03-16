@@ -1,7 +1,8 @@
 part of views;
 
-class TapToStartView extends GetView<TapToStartController> {
-  const TapToStartView({Key? key}) : super(key: key);
+class TapToStartView extends StatelessWidget {
+  TapToStartView({Key? key}) : super(key: key);
+  final TapToStartController controller = Get.put(TapToStartController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,20 +19,22 @@ class TapToStartView extends GetView<TapToStartController> {
                     colors: [pinkColor, orangeColor],
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter)),
-            child: const Center(
-              child: Text("TAP",
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.white,
-                    fontWeight: FontWeight.w600,
-                    shadows: [
-                      Shadow(
-                        color: Colors.black,
-                        offset: Offset(0, 2),
-                        blurRadius: 4,
-                      ),
-                    ],
-                  )),
+            child: Center(
+              child: Text(
+                "TAP",
+                style: GoogleFonts.getFont("Poppins").copyWith(
+                  fontSize: 30,
+                  color: Colors.white,
+                  fontWeight: FontWeight.w600,
+                  shadows: [
+                    const Shadow(
+                      color: Colors.black,
+                      offset: Offset(0, 2),
+                      blurRadius: 4,
+                    ),
+                  ],
+                ),
+              ),
             ),
           )),
     );

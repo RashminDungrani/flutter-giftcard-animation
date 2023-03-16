@@ -1,3 +1,3 @@
 part of styles;
 
-const kDefaultDuration = Duration(milliseconds: 500);
+const kDefaultDuration = Duration(milliseconds: 700);

@@ -1,5 +1,5 @@
 name: giftcard_animation
-version: 1.0.0+1
+version: 0.1.0+2
 publish_to: none
 description: A new Flutter project.
 environment: 
@@ -9,6 +9,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   get: 4.6.5
   responsive_framework: ^0.2.0
+  google_fonts: ^4.0.3
   flutter: 
     sdk: flutter
 

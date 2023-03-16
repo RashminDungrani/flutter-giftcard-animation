@@ -20,4 +20,7 @@ abstract class AppImages {
   // IMAGES
   static const String gift_card_bottom_crop =
       "assets/images/gift_card_bottom_crop.png";
+
+  static const String background_white_star_shadow =
+      "assets/images/background_white_star_shadow.png";
 }
