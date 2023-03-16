@@ -43,8 +43,7 @@ android {
     }
 
     defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.example.giftcard_animation"
+        applicationId "com.rashmin.giftcard_demo"
         // You can update the following values to match your application needs.
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
         minSdkVersion flutter.minSdkVersion
@@ -53,11 +52,29 @@ android {
         versionName flutterVersionName
     }
 
-    buildTypes {
+    signingConfigs {
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
+        file("keystore/key.properties").with { propFile ->
+            if (propFile.canRead()) {
+                def properties = new Properties()
+                properties.load(new FileInputStream(propFile))
+                storeFile file("keystore/${properties['storeFile']}")
+                storePassword properties['storePassword']
+                keyAlias properties['keyAlias']
+                keyPassword properties['keyPassword']
+            } else {
+                println "Unable to read signing.properties"
+            }
+        }
+        }
+    }
+
+    buildTypes {
+        debug {
             signingConfig signingConfigs.debug
+        }
+        release {
+            signingConfig signingConfigs.release
         }
     }
 }

@@ -1,4 +1,4 @@
-package com.example.giftcard_animation
+package com.rashmin.giftcard_demo
 
 import io.flutter.embedding.android.FlutterActivity
 
